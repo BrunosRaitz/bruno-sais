@@ -24,6 +24,7 @@ public class Ex2 {
 		System.out.println("O vendedor " + nome +
 				" terá um salário de R$" + df.format(salarioFinal));
 
+				// Commit no github
 	}
 
 }
