@@ -1,6 +1,6 @@
 public class Exer06 {
 
-    static void main() {
+    public static void main(String[] args) {
 
         int[][] matriz = {
                 {210, 3, 399900},
@@ -26,7 +26,8 @@ public class Exer06 {
         int tamanhoCasaMaiorQuartos = 0;
         int tamanhoCasaMenorQuartos = 0;
         double precoMenorCasa = 0;
-        double 
+        double casasCara = 0;
+        int conta = 0;
 
         for (int linha = 0; linha < matriz.length; linha++){
             if (matriz[linha][0] < matriz[menorCasa][0]) {
@@ -49,15 +50,19 @@ public class Exer06 {
                     precoMenorCasa = matriz[linha][coluna];
                 }
                 if (matriz[linha][2] >= 300000){
+                    casasCara += matriz[linha][0];
+                    conta++;
 
                 }
             }
         }
         System.out.println(somaPreco);
         double mediaPreco = somaPreco / matriz.length;
+        double mediaCasasCara = casasCara / conta;
         System.out.printf("A media de preço é: R$%.2f%n", mediaPreco);
         System.out.println("A menor casa tem: "+matriz[menorCasa][0]+"m² e custa: R$"+precoMenorCasa);
         System.out.println("A diferença de tamanho da maior para a menor casa é: "+(tamanhoCasaMaiorQuartos - tamanhoCasaMenorQuartos)+"m²");
+        System.out.println("A média de tamanho de casas acima de R$300.000 é: "+mediaCasasCara);
 
 
     }

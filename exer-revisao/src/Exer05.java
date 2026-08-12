@@ -1,7 +1,7 @@
 
 
 public class Exer05 {
-    static void main() {
+    public static void main(String[] args) {
 
         double [] elementos = {10, 20, 30, 40, 50};
         int maior = 0;
