@@ -1,30 +1,24 @@
-import java.util.Scanner;
+
 
 public class Exer05 {
+    static void main() {
 
-    public static void main(String[] args) {
-
-        Scanner input = new Scanner(System.in);
-
-        double[] elementos = {10, 20, 30, 40, 50};
-        double maior = elementos[0];
-        double menor = elementos[0];
+        double [] elementos = {10, 20, 30, 40, 50};
+        int maior = 0;
+        int menor = 0;
+        double soma = 0;
 
         for (int i = 0; i < elementos.length; i++){
-            if (elementos[i] > maior){
-                maior = elementos[i];
-            }
-        }
-        for (int i = 1; i < elementos.length; i++){
-            if (elementos[i] < menor){
-                menor = elementos[i];
-            }
-        }
-        double media = elementos / elementos.length;
 
+            if (elementos[i] > elementos[maior]) maior = i;
+            if (elementos[i] < elementos[menor]) menor = i;
+            soma += elementos[i];
+        }
+        double media = soma / elementos.length;
+        System.out.println("=============================================");
+        System.out.println("Maior: v[" + maior + "] = " + elementos[maior]);
+        System.out.println("Menor: v[" + menor + "] = " + elementos[menor]);
+        System.out.println("A media é: "+media);
 
-        System.out.println("O maior elemento é: "+maior);
-        System.out.println("O menor elemento é: "+menor);
-        System.out.println("A media é: ");
     }
 }
