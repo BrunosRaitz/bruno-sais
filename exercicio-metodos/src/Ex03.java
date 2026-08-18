@@ -15,4 +15,11 @@ public class Ex03 {
             System.out.println("Proximo valor: "+(valor+i));
         }
     }
+
+    //public static void imprimirProxNumero(int valor){
+    //    System.out.println("Seu numero é: "+valor);
+    //    for (int i = valor + 1; i <= valor + 20; i++){
+    //        System.out.println("Proximo valor: "+i);
+    //    }
+    //}
 }
