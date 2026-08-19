@@ -16,8 +16,11 @@ public class Ex04 {
         acharMenorValor(vetor);
         acharMedia(vetor);
     }
+
+
     public static void acharMaiorValor(int [] vetor){
         int maior = vetor[0];
+
         for (int i = 0; i < vetor.length; i++){
             if (vetor[i] > maior) maior = vetor[i];
         }
@@ -26,6 +29,7 @@ public class Ex04 {
 
     public static void acharMenorValor(int [] vetor){
         int menor = vetor[0];
+
         for (int i = 0; i < vetor.length; i++){
             if (vetor[i] < menor) menor = vetor[i];
         }
