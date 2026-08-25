@@ -8,11 +8,11 @@ public class Ex09 {
         System.out.println("Digite um valor:");
         int valor = input.nextInt();
 
-        System.out.println("Seu número é: "+acharParImpar(valor));
+        System.out.println("Seu número é: " + acharParImpar(valor));
 
     }
 
-    public static boolean acharParImpar(int num){
+    public static boolean acharParImpar(int num) {
         return num % 2 == 0;
 
     }

@@ -6,16 +6,18 @@ public class Ex07 {
 
         return "É verão \nE o tempo esta quente";
     }
-    public static String obterInverno(){
+
+    public static String obterInverno() {
         return "É inverno \nE está frio";
     }
-    public static String obterOutuno(){
+
+    public static String obterOutuno() {
         return "É outuno \nAs folhas caem";
     }
-    public static String obterPrimavera(){
+
+    public static String obterPrimavera() {
         return "É primavera \nAs flores sao bonitas";
     }
-
 
 
     public static void main(String[] args) {

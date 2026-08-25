@@ -2,27 +2,27 @@ import java.util.Scanner;
 
 public class Ex11 {
 
-    public static int acharMaiorValor(int [] vetor){
+    public static int acharMaiorValor(int[] vetor) {
         int maiorV = vetor[0];
 
-       for (int i = 0; i < vetor.length; i++){
+        for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] > maiorV) maiorV = vetor[i];
         }
-       return maiorV;
+        return maiorV;
     }
 
-    public static int acharMenorValor(int [] vetor){
+    public static int acharMenorValor(int[] vetor) {
         int menorV = vetor[0];
 
-        for (int i = 0; i < vetor.length; i++){
+        for (int i = 0; i < vetor.length; i++) {
             if (vetor[i] < menorV) menorV = vetor[i];
         }
-        return  menorV;
+        return menorV;
     }
 
-    public static double acharMedia(int [] vetor){
+    public static double acharMedia(int[] vetor) {
         double soma = 0;
-        for (int i = 0; i < vetor.length; i++){
+        for (int i = 0; i < vetor.length; i++) {
             soma += vetor[i];
         }
         double media = soma / vetor.length;
@@ -35,8 +35,8 @@ public class Ex11 {
 
         int[] vetor = {5, 10, 15, 20, 25};
 
-        System.out.println("O maior elemento é: "+acharMaiorValor(vetor));
-        System.out.println("O menor elemento é: "+acharMenorValor(vetor));
-        System.out.println("A média do vetor é: "+acharMedia(vetor));
+        System.out.println("O maior elemento é: " + acharMaiorValor(vetor));
+        System.out.println("O menor elemento é: " + acharMenorValor(vetor));
+        System.out.println("A média do vetor é: " + acharMedia(vetor));
     }
 }
