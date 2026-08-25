@@ -15,6 +15,5 @@ public class Ex09 {
     public static boolean acharParImpar(int num){
         return num % 2 == 0;
 
-
     }
 }
