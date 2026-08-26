@@ -22,7 +22,7 @@ public class Ex12 {
 
         System.out.println("=====================");
         System.out.println("Digite uma palavra");
-        String palavra = input.nextLine();
+        String palavra = input.next();
 
         System.out.println("Quantidade de letras: " + contarPalavra(palavra));
         System.out.println(acharPosicaoSeParOuImpar(palavra));
