@@ -13,7 +13,11 @@ public class Ex01 {
         pessoa2.nome = "Giusep Cadura";
         pessoa2.sexo = 'M';
         pessoa2.nascimento = "01/01/2026";
-        pessoa1.estadoCivil = "Betinha";
+        pessoa2.estadoCivil = "Betinha";
+
+        System.out.println(pessoa1.nome+" \n"+ pessoa1.sexo+"\n"+pessoa1.nascimento+"\n"+pessoa1.estadoCivil);
+        System.out.println("\n");
+        System.out.println(pessoa2.nome+" \n"+ pessoa2.sexo+"\n"+pessoa2.nascimento+"\n"+pessoa2.estadoCivil);
 
     }
 }
