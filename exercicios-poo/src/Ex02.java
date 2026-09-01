@@ -12,8 +12,8 @@ public class Ex02 {
         unidadeDeBlumenau.vendasL = 55;
         unidadeDeBlumenau.precoL = 2.77;
 
-        unidadeDeJoinville.nome = "Atacadao do inverno";
-        unidadeDeBlumenau.vendasM = 142;
+        unidadeDeJoinville.nome = "Atacadao do inferno";
+        unidadeDeJoinville.vendasM = 142;
         unidadeDeJoinville.precoM = 2.11;
         unidadeDeJoinville.vendasL = 67;
         unidadeDeJoinville.precoL = 1.93;
@@ -28,6 +28,16 @@ public class Ex02 {
         System.out.println(unidadeDeBlumenau.nome);
         System.out.println("Venda Maça: "+unidadeDeBlumenau.vendasM+"\nPreço Maça: R$"+unidadeDeBlumenau.precoM);
         System.out.println("Venda Laranja: "+unidadeDeBlumenau.vendasL+"\nPreço Laranja: R$"+unidadeDeBlumenau.precoL);
+        System.out.println();
+
+        System.out.println(unidadeDeJoinville.nome);
+        System.out.println("Venda Maça: "+unidadeDeJoinville.vendasM+"\nPreço Maça: R$"+unidadeDeJoinville.precoM);
+        System.out.println("Venda Laranja: "+unidadeDeJoinville.vendasL+"\nPreço Laranja: R$"+unidadeDeJoinville.precoL);
+        System.out.println();
+
+        System.out.println(unidadeDeFlorianopolis.nome);
+        System.out.println("Venda Maça: "+unidadeDeFlorianopolis.vendasM+"\nPreço Maça: R$"+unidadeDeFlorianopolis.precoM);
+        System.out.println("Venda Laranja: "+unidadeDeFlorianopolis.vendasL+"\nPreço Laranja: R$"+unidadeDeFlorianopolis.precoL);
 
 
 
