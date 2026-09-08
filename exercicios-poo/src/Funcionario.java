@@ -4,7 +4,6 @@ public class Funcionario {
     String nome;
     String sobrenome;
     double salarioM;
-    int aumento;
 
 
     public double obterSalarioAnual(){
@@ -15,7 +14,7 @@ public class Funcionario {
         return nome+" "+sobrenome;
     }
 
-    public double obterAumento(int porcentual){
+    public double obterAumentoSalario(int porcentual){
         double aumento = porcentual * salarioM / 100;
         return salarioM + aumento;
     }
