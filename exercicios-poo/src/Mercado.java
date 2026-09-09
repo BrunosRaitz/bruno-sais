@@ -6,4 +6,9 @@ public class Mercado {
     int vendasL;
     double precoL;
 
+
+    public double calcularReceita(){
+        double receitaM;
+        return receitaM = precoM * vendasM;
+    }
 }
