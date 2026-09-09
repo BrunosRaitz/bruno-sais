@@ -7,8 +7,17 @@ public class Mercado {
     double precoL;
 
 
-    public double calcularReceita(){
+    public double calcularReceitaMaca(){
         double receitaM;
         return receitaM = precoM * vendasM;
+    }
+
+    public double calcularReceitaLaranja(){
+        double receitaL;
+        return receitaL = precoL * vendasL;
+    }
+
+    public double calcularReceitaTotal(){
+        return calcularReceitaLaranja() + calcularReceitaMaca();
     }
 }

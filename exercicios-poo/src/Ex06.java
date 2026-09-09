@@ -25,16 +25,68 @@ public class Ex06 {
         lojas[2]. vendasL = 455;
         lojas[2].precoL = 0.89;
 
-        double maiorReceita = 0;
+        double maiorReceitaM = Double.MIN_VALUE;
+        int posicaoM = 0;
         for (int i = 0; i < lojas.length; i++){
 
-            double receita = lojas[i].calcularReceita();
-            if (receita > maiorReceita){
-                maiorReceita = receita;
+            double receita = lojas[i].calcularReceitaMaca();
+            if (receita > maiorReceitaM){
+                maiorReceitaM = receita;
+                posicaoM = i;
 
             }
         }
-        System.out.println("A loja com maior receita tem: R$"+maiorReceita);
 
+        double menorReceitaL = Double.MAX_VALUE;
+        Mercado mercadoMenorReceitaLaranja = null;
+        for (int i = 0; i < lojas.length; i++){
+            double receita = lojas[i].calcularReceitaLaranja();
+            if (receita < menorReceitaL){
+                menorReceitaL = receita;
+                mercadoMenorReceitaLaranja = lojas[i];
+            }
+        }
+
+        double maiorReceitaTotal = 0;
+        double segundaMaiorReceitaTotal = 0;
+        Mercado mercadoSegundaMaiorReceitaTotal = null;
+        for (int i = 0; i <lojas.length; i++){
+            double receitaT = lojas[i].calcularReceitaTotal();
+            if (receitaT > maiorReceitaTotal){
+                maiorReceitaTotal = receitaT;
+            }
+        }
+        for (int i = 0; i <lojas.length; i++){
+            double receitaT = lojas[i].calcularReceitaTotal();
+            if (receitaT > segundaMaiorReceitaTotal && receitaT != maiorReceitaTotal){
+
+                segundaMaiorReceitaTotal = receitaT;
+                mercadoSegundaMaiorReceitaTotal = lojas[i];
+            }
+        }
+
+        double receitaGeralM = 0;
+        double receitaGeralL = 0;
+
+        for (int i = 0; i <lojas.length; i++){
+            receitaGeralM += lojas[i].calcularReceitaMaca();
+            receitaGeralL += lojas[i].calcularReceitaLaranja();
+        }
+
+        System.out.println("A loja com maior receita  de Maça é: ["+lojas[posicaoM].nome+"]\nR$"+maiorReceitaM);
+
+        System.out.println("A loja com menor receita de Laranja é: ["+mercadoMenorReceitaLaranja.nome + "]\nR$"+menorReceitaL);
+
+        System.out.println("A loja com segunda maior receita total é: ["+mercadoSegundaMaiorReceitaTotal.nome + "]\nR$" +segundaMaiorReceitaTotal);
+        if (receitaGeralL > receitaGeralM){
+            System.out.println("A franquia teve a maior receita vendendo laranjas.");
+            System.out.println("R$"+receitaGeralL);
+        } else if (receitaGeralM > receitaGeralL) {
+            System.out.println("A franquia teve a maior receita vendendo maças.");
+            System.out.println("R$"+receitaGeralM);
+        }else {
+            System.out.println("Ambas fraquias tiveream a mesma receita de maça e laranjas.");
+        }
+        
     }
 }
