@@ -4,26 +4,26 @@ public class Ex06 {
 
         Mercado[] lojas = new Mercado[3];
 
-        lojas[0] = new Mercado();
-        lojas[0].nome = "Fifo do bao";
-        lojas[0].vendasM = 100;
-        lojas[0].precoM = 2.34;
-        lojas[0].vendasL = 55;
-        lojas[0].precoL = 2.77;
+        lojas[0] = new Mercado("Fifo do bao", 100, 2.34, 55, 2.77);
+      //  lojas[0].nome = "Fifo do bao";
+      //  lojas[0].vendasM = 100;
+      //  lojas[0].precoM = 2.34;
+      //  lojas[0].vendasL = 55;
+      //  lojas[0].precoL = 2.77;
 
-        lojas[1] = new Mercado();
-        lojas[1].nome = "Atacadao do inferno";
-        lojas[1].vendasM = 142;
-        lojas[1].precoM = 2.11;
-        lojas[1].vendasL = 67;
-        lojas[1]. precoL = 1.93;
+        lojas[1] = new Mercado("Atacadao do inferno", 142, 2.11, 67, 1.93);
+      //  lojas[1].nome = "Atacadao do inferno";
+      //  lojas[1].vendasM = 142;
+      //  lojas[1].precoM = 2.11;
+      //  lojas[1].vendasL = 67;
+      //  lojas[1]. precoL = 1.93;
 
-        lojas[2] = new Mercado();
-        lojas[2].nome = "Seu Eugebio";
-        lojas[2]. vendasM = 341;
-        lojas[2]. precoM = 1.21;
-        lojas[2]. vendasL = 455;
-        lojas[2].precoL = 0.89;
+        lojas[2] = new Mercado("Seu Eugebio", 341, 1.21, 455, 0.89);
+      //  lojas[2].nome = "Seu Eugebio";
+      //  lojas[2]. vendasM = 341;
+      //  lojas[2]. precoM = 1.21;
+      //  lojas[2]. vendasL = 455;
+      //  lojas[2].precoL = 0.89;
 
         double maiorReceitaM = Double.MIN_VALUE;
         int posicaoM = 0;

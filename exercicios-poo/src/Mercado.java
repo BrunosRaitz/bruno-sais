@@ -6,6 +6,13 @@ public class Mercado {
     int vendasL;
     double precoL;
 
+    public Mercado(String nome, int vendasM, double precoM, int vendasL, double precoL) {
+        this.nome = nome;
+        this.vendasM = vendasM;
+        this.precoM = precoM;
+        this.vendasL = vendasL;
+        this.precoL = precoL;
+    }
 
     public double calcularReceitaMaca(){
         double receitaM;
