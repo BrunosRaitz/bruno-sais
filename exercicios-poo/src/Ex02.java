@@ -2,28 +2,28 @@ public class Ex02 {
     public static void main(String[] args) {
 
 
-        Mercado unidadeDeBlumenau = new Mercado();
-        Mercado unidadeDeJoinville = new Mercado();
-        Mercado unidadeDeFlorianopolis = new Mercado();
+        Mercado unidadeDeBlumenau = new Mercado("Fifo do bao", 100, 2.34, 55, 2.77);
+        Mercado unidadeDeJoinville = new Mercado("Atacadao do inferno", 142, 2.11, 67, 1.93);
+        Mercado unidadeDeFlorianopolis = new Mercado("Seu Eugebio", 341, 1.21, 455, 0.89);
 
-        unidadeDeBlumenau.nome = "Fifo do bao";
-        unidadeDeBlumenau.vendasM = 100;
-        unidadeDeBlumenau.precoM = 2.34;
-        unidadeDeBlumenau.vendasL = 55;
-        unidadeDeBlumenau.precoL = 2.77;
+        //unidadeDeBlumenau.nome = "Fifo do bao";
+        //unidadeDeBlumenau.vendasM = 100;
+        //unidadeDeBlumenau.precoM = 2.34;
+       // unidadeDeBlumenau.vendasL = 55;
+        //unidadeDeBlumenau.precoL = 2.77;
 
-        unidadeDeJoinville.nome = "Atacadao do inferno";
-        unidadeDeJoinville.vendasM = 142;
-        unidadeDeJoinville.precoM = 2.11;
-        unidadeDeJoinville.vendasL = 67;
-        unidadeDeJoinville.precoL = 1.93;
+       // unidadeDeJoinville.nome = "Atacadao do inferno";
+       // unidadeDeJoinville.vendasM = 142;
+       // unidadeDeJoinville.precoM = 2.11;
+       // unidadeDeJoinville.vendasL = 67;
+       // unidadeDeJoinville.precoL = 1.93;
 
 
-        unidadeDeFlorianopolis.nome = "Seu Eugebio";
-        unidadeDeFlorianopolis.vendasM = 341;
-        unidadeDeFlorianopolis.precoM = 1.21;
-        unidadeDeFlorianopolis.vendasL = 455;
-        unidadeDeFlorianopolis.precoL = 0.89;
+       // unidadeDeFlorianopolis.nome = "Seu Eugebio";
+        //unidadeDeFlorianopolis.vendasM = 341;
+        //unidadeDeFlorianopolis.precoM = 1.21;
+       // unidadeDeFlorianopolis.vendasL = 455;
+       // unidadeDeFlorianopolis.precoL = 0.89;
 
         System.out.println(unidadeDeBlumenau.nome);
         System.out.println("Venda Maça: "+unidadeDeBlumenau.vendasM+"\nPreço Maça: R$"+unidadeDeBlumenau.precoM);
