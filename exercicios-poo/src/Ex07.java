@@ -12,8 +12,8 @@ public class Ex07 {
         int maiorNumPassageiro = 0;
         Aeronave aeronovaMaiorNumPassageiros = null;
         for (int i = 0; i < aeronaves.length; i++){
-            if (aeronaves[i].passageiros > maiorNumPassageiro){
-                maiorNumPassageiro = aeronaves[i].passageiros;
+            if (aeronaves[i].getPassageiros() > maiorNumPassageiro){
+                maiorNumPassageiro = aeronaves[i].getPassageiros();
                 aeronovaMaiorNumPassageiros = aeronaves[i];
             }
         }
@@ -38,8 +38,8 @@ public class Ex07 {
         }
 
         System.out.println(aeronovaMaiorNumPassageiros);
-        System.out.println(aeronaveMaiorTempoAr.maiorTempoAr()+" L/min");
-        System.out.println(aeronaveMaiorDistania.maiorDistanciaPercorrida()+" Km");
+        System.out.println(aeronaveMaiorTempoAr);
+        System.out.println(aeronaveMaiorDistania);
 
 
     }
