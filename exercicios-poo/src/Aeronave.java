@@ -25,5 +25,10 @@ public class Aeronave {
                 '}';
     }
 
-
+    public double maiorTempoAr(){
+        return capacidadeCombustivel / queimaCombustivel;
+    }
+    public double maiorDistanciaPercorrida(){
+        return velocidadeMax * maiorTempoAr();
+    }
 }
