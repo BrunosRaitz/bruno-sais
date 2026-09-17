@@ -7,11 +7,16 @@ public class Aeronave {
     private double queimaCombustivel;
 
     public Aeronave(String modelo, int passageiros, double velocidadeMax, double capacidadeCombustivel, double queimaCombustivel) {
-        this.modelo = modelo;
+       /* this.modelo = modelo;
         this.passageiros = passageiros;
         this.velocidadeMax = velocidadeMax;
         this.capacidadeCombustivel = capacidadeCombustivel;
-        this.queimaCombustivel = queimaCombustivel;
+        this.queimaCombustivel = queimaCombustivel;*/
+        setModelo(modelo);
+        setPassageiros(passageiros);
+        setVelocidadeMax(velocidadeMax);
+        setCapacidadeCombustivel(capacidadeCombustivel);
+        setQueimaCombustivel(queimaCombustivel);
     }
 
     @Override
@@ -37,6 +42,9 @@ public class Aeronave {
     }
 
     public void setModelo(String modelo) {
+        if (modelo == null || modelo.isBlank()){
+            System.out.println("Erro. Modelo invalido");
+        }
         this.modelo = modelo;
     }
 
@@ -45,7 +53,13 @@ public class Aeronave {
     }
 
     public void setPassageiros(int passageiros) {
-        this.passageiros = passageiros;
+
+        if (passageiros < 0){
+
+            System.out.println("Erro. Quantidade invalida.");
+        }else {
+            this.passageiros = passageiros;
+        }
     }
 
     public double getVelocidadeMax() {
@@ -53,7 +67,11 @@ public class Aeronave {
     }
 
     public void setVelocidadeMax(double velocidadeMax) {
-        this.velocidadeMax = velocidadeMax;
+        if (velocidadeMax <= 0){
+            System.out.println("Erro. Velocidade invalida");
+        }else {
+            this.velocidadeMax = velocidadeMax;
+        }
     }
 
     public double getCapacidadeCombustivel() {
@@ -61,7 +79,11 @@ public class Aeronave {
     }
 
     public void setCapacidadeCombustivel(double capacidadeCombustivel) {
-        this.capacidadeCombustivel = capacidadeCombustivel;
+        if (capacidadeCombustivel <= 0){
+            System.out.println("Erro. Quantidade invalida");
+        }else {
+            this.capacidadeCombustivel = capacidadeCombustivel;
+        }
     }
 
     public double getQueimaCombustivel() {
@@ -69,6 +91,10 @@ public class Aeronave {
     }
 
     public void setQueimaCombustivel(double queimaCombustivel) {
-        this.queimaCombustivel = queimaCombustivel;
+        if (queimaCombustivel <= 0){
+            System.out.println("Erro. Queima de combustivel invalida");
+        }else {
+            this.queimaCombustivel = queimaCombustivel;
+        }
     }
 }
