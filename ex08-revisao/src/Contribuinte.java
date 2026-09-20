@@ -18,9 +18,9 @@ public class Contribuinte {
     }
 
     public void setNome(String nome) {
-        if (nome == null || nome.isBlank()){
+        if (nome == null || nome.isBlank()) {
             System.out.println("Erro, nome invalido.");
-        }else {
+        } else {
             this.nome = nome;
         }
     }
@@ -30,9 +30,9 @@ public class Contribuinte {
     }
 
     public void setCpf(String cpf) {
-        if (cpf == null || cpf.isBlank()){
+        if (cpf == null || cpf.isBlank()) {
             System.out.println("Erro, CPF invalido.");
-        }else {
+        } else {
             this.cpf = cpf;
         }
     }
@@ -42,9 +42,9 @@ public class Contribuinte {
     }
 
     public void setUf(String uf) {
-        if (uf == null || uf.isBlank()){
+        if (uf == null || uf.isBlank()) {
             System.out.println("Erro, Unidade Federativa invalida.");
-        }else {
+        } else {
             this.uf = uf;
         }
     }
@@ -54,10 +54,31 @@ public class Contribuinte {
     }
 
     public void setRendaAnual(double rendaAnual) {
-        if (rendaAnual <= 0){
+        if (rendaAnual <= 0) {
             System.out.println("Erro, renda invalida.");
-        }else {
+        } else {
             this.rendaAnual = rendaAnual;
         }
+    }
+
+    public double calcularAliquota() {
+        return rendaAnual > 35000 ? 0.30 :
+               rendaAnual > 25000 ? 0.275 :
+               rendaAnual > 9000 ? 0.15 :
+               rendaAnual > 4000 ? 0.058 : 0.0;
+    }
+
+    public double calcularImposto(){
+        return rendaAnual * calcularAliquota();
+    }
+
+    @Override
+    public String toString() {
+        return "Contribuinte{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", uf='" + uf + '\'' +
+                ", rendaAnual=" + rendaAnual +
+                '}';
     }
 }
