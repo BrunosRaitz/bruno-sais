@@ -25,7 +25,7 @@ public class Contribuinte {
         } else if (rendaAnual > 9000) {
             aliquota = 0.15;
         } else if (rendaAnual > 4000) {
-            aliquota = 0.58;
+            aliquota = 0.058;
         }else {
             aliquota = 0;
         }
