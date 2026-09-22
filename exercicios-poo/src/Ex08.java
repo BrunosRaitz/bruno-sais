@@ -11,11 +11,11 @@ public class Ex08 {
 
 
         double maiorImposto = 0;
-        Contribuinte teste = null;
+        Contribuinte cMaiorImposto = null;
         for (int i = 0; i <contribuintes.length; i++){
             if (contribuintes[i].calculoImposto() > maiorImposto){
                 maiorImposto = contribuintes[i].calculoImposto();
-                teste = contribuintes[i];
+                cMaiorImposto = contribuintes[i];
             }
         }
 
@@ -25,7 +25,7 @@ public class Ex08 {
         }
 
         //System.out.printf("%.2f ", teste.calculoImposto());;
-        System.out.println(teste);
+        System.out.println(cMaiorImposto);
        // System.out.println();
         System.out.println("Imposto total dos 5 contribuintes: R$"+impostoTotal);
     }
