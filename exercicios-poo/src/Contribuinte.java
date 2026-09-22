@@ -17,28 +17,23 @@ public class Contribuinte {
     }
 
     public double calculoAliquota(){
-        double aliquota;
+
         if (rendaAnual > 35000.0){
-            aliquota = 0.30;
+            return  0.30;
         } else if (rendaAnual > 25000) {
-            aliquota = 0.275;
+            return  0.275;
         } else if (rendaAnual > 9000) {
-            aliquota = 0.15;
+            return  0.15;
         } else if (rendaAnual > 4000) {
-            aliquota = 0.058;
+            return  0.058;
         }else {
-            aliquota = 0;
+            return 0;
         }
-        return aliquota;
     }
     public double calculoImposto(){
         double imposto = rendaAnual * calculoAliquota();
         return imposto;
     }
-
-
-
-
 
     public String getNome() {
         return nome;
@@ -57,7 +52,7 @@ public class Contribuinte {
     }
 
     public void setCpf(String cpf) {
-        if (cpf == null || cpf.isBlank()){
+        if (cpf == null || cpf.isBlank() || cpf.length() != 11){
             System.out.println("Erro. CPF cancelado");
         }else {
             this.cpf = cpf;
@@ -69,8 +64,8 @@ public class Contribuinte {
     }
 
     public void setUf(String uf) {
-        if (uf == null || uf.isBlank()){
-            System.out.println("Erro. UF invalido");
+        if (uf == null || uf.isBlank() || uf.length() != 2){
+            System.out.println("Erro. UF invalida");
         }else {
             this.uf = uf;
         }
