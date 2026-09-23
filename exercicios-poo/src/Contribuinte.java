@@ -76,7 +76,7 @@ public class Contribuinte {
     }
 
     public void setRendaAnual(double rendaAnual) {
-        if (rendaAnual <= 0){
+        if (rendaAnual < 0){
             System.out.println("Erro. Renda Anual invalida");
         }else {
             this.rendaAnual = rendaAnual;
