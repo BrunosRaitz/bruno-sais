@@ -22,6 +22,6 @@ public class exemplo1 {
         System.out.println(idades.indexOf(18));
 
         System.out.println(idades.getLast());
-        
+
     }
 }
