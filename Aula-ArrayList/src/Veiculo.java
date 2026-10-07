@@ -68,4 +68,15 @@ public class Veiculo {
         }
         this.preco = preco;
     }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", placa='" + placa + '\'' +
+                ", ano=" + ano +
+                ", preco=" + preco +
+                '}';
+    }
 }
