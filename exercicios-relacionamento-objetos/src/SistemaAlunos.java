@@ -12,5 +12,10 @@ public class SistemaAlunos {
     public void adicionarAluno(Alunos a){
         alunos.add(a);
     }
-    
+    public Alunos pesquisarDadosAlunos (int idade, double y){
+
+        for (Alunos a : alunos){
+            if (a.getIdade() >= idade && )
+        }
+    }
 }

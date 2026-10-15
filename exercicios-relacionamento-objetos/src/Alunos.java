@@ -4,6 +4,9 @@ public class Alunos {
     private int idade;
     private String matriculo;
     private String curso;
+    private double mediaFinal;
+
+
 
     public Alunos(String nome, int idade, String matriculo, String curso) {
         setNome(nome);
@@ -54,5 +57,16 @@ public class Alunos {
             throw new IllegalArgumentException("Curso invalido");
         }
         this.curso = curso;
+    }
+
+    public double getMediaFinal() {
+        return mediaFinal;
+    }
+
+    public void setMediaFinal(double mediaFinal) {
+        if (mediaFinal < 0){
+            throw new IllegalArgumentException("Media invalida");
+        }
+        this.mediaFinal = mediaFinal;
     }
 }
