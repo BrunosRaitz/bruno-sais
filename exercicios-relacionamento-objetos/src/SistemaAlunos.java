@@ -15,7 +15,9 @@ public class SistemaAlunos {
     public Alunos pesquisarDadosAlunos (int idade, double y){
 
         for (Alunos a : alunos){
-            if (a.getIdade() >= idade && )
+            if (a.getIdade() >= idade && a.getMediaFinal() >= y);
         }
+
+        return null;
     }
 }

@@ -8,11 +8,12 @@ public class Alunos {
 
 
 
-    public Alunos(String nome, int idade, String matriculo, String curso) {
+    public Alunos(String nome, int idade, String matriculo, String curso, double mediaFinal) {
         setNome(nome);
         setIdade(idade);
         setMatriculo(matriculo);
         setCurso(curso);
+        setMediaFinal(mediaFinal);
     }
 
     public String getNome() {
