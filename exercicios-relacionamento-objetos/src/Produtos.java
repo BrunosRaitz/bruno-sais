@@ -56,6 +56,21 @@ public class Produtos {
         this.quantidade = quantidade;
     }
 
+    public void adicionarUnidadesProduto(int q){
+        quantidade += q;
+    }
+
+    public boolean venderProduto(int v){
+       if (v > quantidade || v <= 0){
+            return false;
+        }else {
+            quantidade -=v;
+            return true;
+        }
+    }
+
+
+
     @Override
     public String toString() {
         return "Produtos{" +

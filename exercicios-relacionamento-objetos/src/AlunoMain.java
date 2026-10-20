@@ -13,7 +13,7 @@ public class AlunoMain {
         s1.adicionarAluno(a2);
         s1.adicionarAluno(a3);
 
-        System.out.println(s1.pesquisarAlunos("Informatica", 18, 5));
+        System.out.println(s1.pesquisarAlunosPorCurso("Informatica", 18, 5));
 
         Alunos resultado = s1.buscarAluno("1234567");
 
