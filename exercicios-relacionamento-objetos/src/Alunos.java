@@ -70,4 +70,15 @@ public class Alunos {
         }
         this.mediaFinal = mediaFinal;
     }
+
+    @Override
+    public String toString() {
+        return "Alunos{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", matriculo='" + matriculo + '\'' +
+                ", curso='" + curso + '\'' +
+                ", mediaFinal=" + mediaFinal +
+                '}';
+    }
 }

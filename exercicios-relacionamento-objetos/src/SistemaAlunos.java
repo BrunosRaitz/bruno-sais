@@ -12,12 +12,25 @@ public class SistemaAlunos {
     public void adicionarAluno(Alunos a){
         alunos.add(a);
     }
-    public Alunos pesquisarDadosAlunos (int idade, double y){
+    public List<Alunos> pesquisarAlunos (String curso, int i, double m){
 
+        List<Alunos> cursoAlunos = new ArrayList<>();
         for (Alunos a : alunos){
-            if (a.getIdade() >= idade && a.getMediaFinal() >= y);
+            if (a.getIdade() >= i && a.getMediaFinal() >= m){
+                if (a.getCurso().equals(curso)){
+                    cursoAlunos.add(a);
+                }
+            }
         }
+        return cursoAlunos;
+    }
 
+    public Alunos buscarAluno (String matricula){
+        for (Alunos a : alunos){
+            if (matricula.equals(a.getMatriculo())){
+                return a;
+            }
+        }
         return null;
     }
 }
