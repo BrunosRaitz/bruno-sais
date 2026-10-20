@@ -25,7 +25,7 @@ public class SistemaAlunos {
         return cursoAlunos;
     }
 
-    public Alunos buscarAluno (String matricula){
+    public Alunos buscarAlunoPorMatricula (String matricula){
         for (Alunos a : alunos){
             if (matricula.equals(a.getMatriculo())){
                 return a;

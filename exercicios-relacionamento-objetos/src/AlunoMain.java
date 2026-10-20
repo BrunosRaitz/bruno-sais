@@ -15,7 +15,7 @@ public class AlunoMain {
 
         System.out.println(s1.pesquisarAlunosPorCurso("Informatica", 18, 5));
 
-        Alunos resultado = s1.buscarAluno("1234567");
+        Alunos resultado = s1.buscarAlunoPorMatricula("1234567");
 
         if (resultado != null) {
             System.out.println(resultado);
