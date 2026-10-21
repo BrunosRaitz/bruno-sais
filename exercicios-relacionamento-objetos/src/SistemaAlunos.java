@@ -10,6 +10,11 @@ public class SistemaAlunos {
     }
 
     public void adicionarAluno(Alunos a){
+        for (Alunos aluno : alunos){
+            if (aluno.getMatriculo().equalsIgnoreCase(a.getMatriculo())){
+                throw new IllegalArgumentException("Matricula repetida.");
+            }
+        }
         alunos.add(a);
     }
     public List<Alunos> pesquisarAlunosPorCurso (String curso, int i, double m){
