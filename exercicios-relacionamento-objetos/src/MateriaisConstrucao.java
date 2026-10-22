@@ -27,4 +27,16 @@ public class MateriaisConstrucao {
         return produtoMaisCaro;
     }
 
+    public List<Produtos> obterTodosProdutosDaMarcaPorPreco (String m, double x, double y){
+        List<Produtos> buscaProdutos = new ArrayList<>();
+        for (Produtos p : materiais){
+            if (p.getMarca().equalsIgnoreCase(m)) {
+                if (p.getPreco() >= x && p.getPreco() <= y) {
+                    buscaProdutos.add(p);
+                }
+            }
+        }
+        return buscaProdutos;
+    }
+
 }
