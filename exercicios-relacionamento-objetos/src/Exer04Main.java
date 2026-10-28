@@ -20,6 +20,9 @@ public class Exer04Main {
         m1.adicionarMaterial(p5);
         m1.adicionarMaterial(p6);
 
+        p1.adicionarUnidadesProduto(5);
+        System.out.println(p1.getQuantidade());
+
         System.out.println(m1.pesquisarProdutoMaisCaro("rexona"));
         System.out.println(m1.obterTodosProdutosDaMarcaPorPreco("rexona", 10, 100));
     }

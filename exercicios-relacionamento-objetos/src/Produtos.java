@@ -57,6 +57,9 @@ public class Produtos {
     }
 
     public void adicionarUnidadesProduto(int q){
+        if (q <= 0){
+            throw new IllegalArgumentException("Negativos invalido");
+        }
         quantidade += q;
     }
 
