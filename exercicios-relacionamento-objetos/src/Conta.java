@@ -28,7 +28,7 @@ public class Conta {
     }
 
     public double sacarValor(double v){
-        if (saldo < v) {
+        if (saldo < v || v < 1) {
             throw new IllegalArgumentException("Saldo invalido");
         }
             saldo = saldo - v;
@@ -44,7 +44,7 @@ public class Conta {
     }
 
     public void transferirValor( Conta c, double v){
-        if (saldo < v){
+        if (saldo < v || c == null){
             throw new IllegalArgumentException("Valor insuficiente em conta");
         }
         saldo -= v;
@@ -52,7 +52,7 @@ public class Conta {
     }
 
     public double simularInventimento(double v, int m){
-        
+
     }
 
     @Override
