@@ -51,8 +51,11 @@ public class Conta {
         c.saldo += v;
     }
 
-    public double simularInventimento(double v, int m){
-
+    public double simularInvestimento(double v, int m) {
+        if (m <= 0 || v <= 0) {
+            throw new IllegalArgumentException("Erro, meses ou valor investido inválido");
+        }
+        return v * Math.pow(1.01, m);
     }
 
     @Override
