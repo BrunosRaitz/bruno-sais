@@ -8,6 +8,12 @@ public class Exer05Main {
         c2.transferirValor(c1, 300);
         System.out.println(c2.getSaldo());
 
+        c2.depositarValor(1000);
+        System.out.println(c2);
+
+
+        System.out.println(c1.simularInvestimento(1500, 12));
+
 
     }
 }
