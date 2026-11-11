@@ -7,11 +7,11 @@ public class Endereco {
     private String numresidencia;
 
     public Endereco(String uf, String cidade, String cep, String logradouro, String numresidencia) {
-        this.uf = uf;
-        this.cidade = cidade;
-        this.cep = cep;
-        this.logradouro = logradouro;
-        this.numresidencia = numresidencia;
+        setUf(uf);
+        setCidade(cidade);
+        setCep(cep);
+        setLogradouro(logradouro);
+        setNumresidencia(numresidencia);
     }
 
     public String getUf() {
@@ -19,7 +19,7 @@ public class Endereco {
     }
 
     public void setUf(String uf) {
-        if (uf == null || uf.isBlank()){
+        if (uf == null || uf.isBlank() || uf.length() > 2){
             throw new IllegalArgumentException("UF invalido");
         }
         this.uf = uf;
@@ -41,7 +41,7 @@ public class Endereco {
     }
 
     public void setCep(String cep) {
-        if (cep == null || cep.isBlank()){
+        if (cep == null || cep.isBlank() || cep.length() > 8){
             throw new IllegalArgumentException("CEP invalido");
         }
         this.cep = cep;
@@ -67,5 +67,16 @@ public class Endereco {
             throw new IllegalArgumentException("Numero residencial invalido");
         }
         this.numresidencia = numresidencia;
+    }
+
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "uf='" + uf + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", cep='" + cep + '\'' +
+                ", logradouro='" + logradouro + '\'' +
+                ", numresidencia='" + numresidencia + '\'' +
+                '}';
     }
 }

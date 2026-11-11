@@ -1,9 +1,9 @@
 public class Pessoa {
 
     private String nome;
-    private String endereco;
+    private Endereco endereco;
 
-    public Pessoa(String nome, String endereco) {
+    public Pessoa(String nome, Endereco endereco) {
         setNome(nome);
         setEndereco(endereco);
     }
@@ -19,14 +19,22 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public String getEndereco() {
+    public Endereco getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(String endereco) {
-        if (endereco == null || endereco.isBlank()){
+    public void setEndereco(Endereco endereco) {
+        if (endereco == null){
             throw new IllegalArgumentException("Endereço invalido");
         }
         this.endereco = endereco;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", endereco=" + endereco +
+                '}';
     }
 }
