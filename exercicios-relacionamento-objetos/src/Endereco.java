@@ -19,7 +19,7 @@ public class Endereco {
     }
 
     public void setUf(String uf) {
-        if (uf == null || uf.isBlank() || uf.length() > 2){
+        if (uf == null || uf.isBlank() || uf.length() != 2){
             throw new IllegalArgumentException("UF invalido");
         }
         this.uf = uf;
@@ -41,7 +41,7 @@ public class Endereco {
     }
 
     public void setCep(String cep) {
-        if (cep == null || cep.isBlank() || cep.length() > 8){
+        if (cep == null || cep.isBlank() || cep.length() != 8){
             throw new IllegalArgumentException("CEP invalido");
         }
         this.cep = cep;
