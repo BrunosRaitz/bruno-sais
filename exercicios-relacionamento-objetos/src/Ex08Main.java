@@ -26,6 +26,6 @@ public class Ex08Main {
         System.out.println();
 
         System.out.println(c1.obterVereadoresAcimaDaMedia());
-        
+
     }
 }
